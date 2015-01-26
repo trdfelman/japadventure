@@ -53,12 +53,62 @@ a {
 }
 .holder {
 	position: absolute;
-	bottom: 10px;
-	left: 0;
+	left: 81%;
 	margin: 0 0 0 1em;
+	top: 6%;
+	border-radius: 25px;
 }
 
 input:focus::-webkit-input-placeholder 
 {
     color: transparent;
+}
+.opaque-button{
+	font-weight: 600 !important;
+	font-size: 50px;
+	background: none !important;
+}
+#player-controls > ul > li > a > img{
+	height: 50px;
+	width: 50px;
+	margin: 20px -10px;	
+}
+input{
+	color: #FFF;
+	background: none;
+	border: 3px solid #FFF;
+	border-radius: 25px;
+	-webkit-appearance: none;
+	font: inherit;
+	font-weight: bold;
+}
+.icons{
+	background: white;
+	border-radius: 50% !important;
+	width: 10% !important;
+	height: 150px;
+	top: 10em !important;
+	margin: 0 6%;
+}
+.options{
+	border: none !important;
+}
+.opt{
+	float: left;
+}
+.opt-main{
+	width: 100%;
+	text-align: center;
+	margin-top: 20%;
+}
+.opt-main2{
+	width: 100%;
+	text-align: center;
+	margin-top: 50%;
+}
+.option2{
+	margin-top: -30%;
+}
+.option1, .option2{
+	display: none;
 }

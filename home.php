@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/video-player.css">
 <link rel="stylesheet" href="css/main-min.css">
+<link rel="stylesheet" href="css/style.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/video-player.js"></script>
 
@@ -48,7 +48,7 @@ p{
 	<div id="player" allowfullscreen="1"></div>
 	<div class="title-box">
 			<p class="header">日本アドベンチャー</p>
-			<p class="header-description">some description here</p>
+			<p class="header-description">We will take you to the place you've never been. </p>
 	</div>
 	<div  class="share-box">
 			<iframe src="//www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;layout=button_count" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
@@ -61,10 +61,25 @@ p{
 			
 		</div>
 	</div>
+	
+	<div class="option1">
+		<div class="opt-main">
+			<a class="options bus" href="#"><img class="icons" alt="bus" src="img/bus.png"></a>
+			<a class="options taxi" href="#"><img class="icons" alt="bus" src="img/taxi.png"></a>
+			<a class="options train" href="#"><img class="icons" alt="bus" src="img/train.png"></a>
+		</div>
+	</div>
+	<div class="option2">
+		<div class="opt-main2">
+			<a class="options canal" href="#"><img class="icons" alt="bus" src="img/canal.jpg"></a>
+			<a class="options dazaifu" href="#"><img class="icons" alt="bus" src="img/dazaifu.jpg"></a>
+			<a class="options tower" href="#"><img class="icons" alt="bus" src="img/tower.jpg"></a>
+		</div>
+	</div>
 	<div id="player-controls" class="ytp-controls">
 			
 			<ul class="list-item">
-				<li class="pause"><a class="opaque-button" href="#">pause</a></li>
+				<li class="pause"><a class="opaque-button" href="#"><img alt="adventure" src="img/pause.png" style="background: white; border-radius: 100%;"></a></li>
 			</ul>
 		</div>
   </body>
