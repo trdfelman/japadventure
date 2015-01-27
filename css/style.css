@@ -53,10 +53,8 @@ a {
 }
 .holder {
 	position: absolute;
-	left: 81%;
-	margin: 0 0 0 1em;
-	top: 6%;
-	border-radius: 25px;
+	right: .5em;
+	top: 2.5em;
 }
 
 input:focus::-webkit-input-placeholder 
@@ -77,7 +75,7 @@ input{
 	color: #FFF;
 	background: none;
 	border: 3px solid #FFF;
-	border-radius: 25px;
+	border-radius: 1.5em;
 	-webkit-appearance: none;
 	font: inherit;
 	font-weight: bold;
