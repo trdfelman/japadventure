@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/video-player.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
 
 
 
@@ -53,9 +54,30 @@ p{
 	<div  class="share-box">
 			<iframe src="//www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;layout=button_count" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
 		</div>
-	<div class="holder">
-		<input type="text" name="place" placeholder="Where do you to go next?"/>
+	<form id="location" action="process.php" method="post">
+		<div class="holder">
+			<input type="text" name="place" id="place" placeholder="Where do you to go next?"/>
+			
 		</div>
+		<input type="submit" name='submit' style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+	</form>
+	<script type="text/javascript">
+		$("#location").submit(function(event) {
+			event.preventDefault();
+			var $form = $( this ),
+			url = $form.attr( 'action' );
+			var posting = $.post( url, { place: $('#place').val() });
+			posting.done(function( data ) {
+				if($('#place').val().trim() == '' && $('#place').val().trim() !== null && $('#place').val().trim() !== undefined){
+					alert('Error 404: Place Not found');
+				}
+				else{
+					alert('You want to go to '+ $('#place').val() + "?");
+				}
+			});
+		});
+	</script>
+	
 	<div class="menus">
 		<div class="button">
 			

@@ -19,7 +19,7 @@
 		width: '100%',
 		videoId: 'rQ85SalP5m4',
 		playerVars: { 'autoplay': 1, 
-		'controls': 1,
+		'controls': 0,
 		'showinfo': 0,
 		'loop':1,
 		'enablejsapi' : 1,

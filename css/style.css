@@ -53,10 +53,8 @@ a {
 }
 .holder {
 	position: absolute;
-	left: 81%;
-	margin: 0 0 0 1em;
-	top: 6%;
-	border-radius: 25px;
+	right: .5em;
+	top: 2.5em;
 }
 
 input:focus::-webkit-input-placeholder 
@@ -85,7 +83,7 @@ input{
 .icons{
 	background: white;
 	border-radius: 50% !important;
-	width: 50%;
+	width: 150px;
 	height: 150px;
 	top: 10em !important;
 	margin: 0 6%;
