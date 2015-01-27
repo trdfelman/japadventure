@@ -98,14 +98,15 @@ p{
 			<div class="choice"><a class="options tower" href="#"><img class="icons" alt="bus" src="img/tower.jpg"></a><p>FOKUOKA TOWER</p></div>
 		</div>
 	</div>
+	<div class="option_main" style="display: block;">
+				<a class="options starts" href="#"><img class="icons" alt="start" src="img/start-button.png"/></a>
+	</div>
 	<div id="player-controls" class="ytp-controls" style="display: none;">
 			
 			<ul class="list-item">
 				<li class="pause"><a class="opaque-button" href="#"><img alt="adventure" src="img/pause.png" style="background: white; border-radius: 100%;"></a></li>
 			</ul>
 	</div>
-	<div class="option_main" style="display: block;">
-		<a class="options starts" href="#"><img class="icons" alt="start" src="img/start-button.png" style="width: 12%;"></a>
-	</div>
+	
   </body>
 </html>

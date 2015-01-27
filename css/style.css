@@ -112,11 +112,15 @@ input{
 }
 .option_main{
 	text-align: center;
-	padding-top: 30%;
+	padding-top: 18em;
 	opacity: 0.9;
 }
 .choice{
 	float: left;
 	width: 23%;
 	margin: 0 5% 5% 5%;
+}
+
+#player {
+	width: 100%!important;
 }
