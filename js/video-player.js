@@ -19,7 +19,7 @@
 		width: '100%',
 		videoId: 'rQ85SalP5m4',
 		playerVars: { 'autoplay': 1, 
-		'controls': 0,
+		'controls': 1,
 		'showinfo': 0,
 		'loop':1,
 		'enablejsapi' : 1,
@@ -52,6 +52,9 @@
 	});
 	$('.bus').bind('click', function(){
 		clearInterval(stop1);
+		clearInterval(stop_bus);
+		clearInterval(stop_taxi);
+		clearInterval(stop_train);
 		player.seekTo(parseFloat(60));
 		player.playVideo();
 		$('.option1').hide();
@@ -59,6 +62,9 @@
 	});
 	$('.taxi').bind('click', function(){
 		clearInterval(stop1);
+		clearInterval(stop_bus);
+		clearInterval(stop_taxi);
+		clearInterval(stop_train);
 		player.seekTo(parseFloat(150));
 		player.playVideo();
 		$('.option1').hide();
@@ -66,6 +72,9 @@
 	});
 	$('.train').bind('click', function(){
 		clearInterval(stop1);
+		clearInterval(stop_bus);
+		clearInterval(stop_taxi);
+		clearInterval(stop_train);
 		player.seekTo(parseFloat(240));
 		player.playVideo();
 		$('.option1').hide();
@@ -79,6 +88,8 @@
 		clearInterval(option_bus);
 		clearInterval(option_taxi);
 		clearInterval(option_train);
+		clearInterval(stop_dazaifu);
+		clearInterval(stop_tower);
 		player.seekTo(parseFloat(310));
 		player.playVideo();
 		$('.option2').hide();
@@ -91,6 +102,8 @@
 		clearInterval(option_bus);
 		clearInterval(option_taxi);
 		clearInterval(option_train);
+		clearInterval(stop_canal);
+		clearInterval(stop_tower);
 		player.seekTo(parseFloat(380));
 		player.playVideo();
 		$('.option2').hide();
@@ -103,6 +116,8 @@
 		clearInterval(option_bus);
 		clearInterval(option_taxi);
 		clearInterval(option_train);
+		clearInterval(stop_canal);
+		clearInterval(stop_dazaifu);
 		player.seekTo(parseFloat(450));
 		player.playVideo();
 		$('.option2').hide();
@@ -174,7 +189,7 @@
 	  /*else{
 		  $('.option1').css({opacity:0}).hide()
 	  }*/
-  },100);
+  },100); 
   
   var stop1= setInterval(function(){
 	  if(player.getCurrentTime() >= 40){
