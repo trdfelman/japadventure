@@ -7,7 +7,6 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/video-player.js"></script>
-<script type="text/javascript" src="js/jquery.form.js"></script>
 
 
 
@@ -54,30 +53,9 @@ p{
 	<div  class="share-box">
 			<iframe src="//www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;layout=button_count" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
 		</div>
-	<form id="location" action="process.php" method="post">
-		<div class="holder">
-			<input type="text" name="place" id="place" placeholder="Where do you to go next?"/>
-			
+	<div class="holder">
+		<input type="text" name="place" placeholder="Where do you to go next?"/>
 		</div>
-		<input type="submit" name='submit' style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
-	</form>
-	<script type="text/javascript">
-		$("#location").submit(function(event) {
-			event.preventDefault();
-			var $form = $( this ),
-			url = $form.attr( 'action' );
-			var posting = $.post( url, { place: $('#place').val() });
-			posting.done(function( data ) {
-				if($('#place').val().trim() == '' && $('#place').val().trim() !== null && $('#place').val().trim() !== undefined){
-					alert('Error 404: Place Not found');
-				}
-				else{
-					alert('You want to go to '+ $('#place').val() + "?");
-				}
-			});
-		});
-	</script>
-	
 	<div class="menus">
 		<div class="button">
 			
@@ -86,23 +64,26 @@ p{
 	
 	<div class="option1">
 		<div class="opt-main">
-			<a class="options bus" href="#"><img class="icons" alt="bus" src="img/bus.png"></a>
-			<a class="options taxi" href="#"><img class="icons" alt="bus" src="img/taxi.png"></a>
-			<a class="options train" href="#"><img class="icons" alt="bus" src="img/train.png"></a>
+			<div class="choice"><a class="options bus" href="#"><img class="icons" alt="bus" src="img/bus.png"></a><p>BUS</p></div>
+			<div class="choice"><a class="options taxi" href="#"><img class="icons" alt="bus" src="img/taxi.png"></a><p>TAXI</p></div>
+			<div class="choice"><a class="options train" href="#"><img class="icons" alt="bus" src="img/train.png"></a><p>TRAIN</p></div>
 		</div>
 	</div>
 	<div class="option2">
 		<div class="opt-main2">
-			<a class="options canal" href="#"><img class="icons" alt="bus" src="img/canal.jpg"></a>
-			<a class="options dazaifu" href="#"><img class="icons" alt="bus" src="img/dazaifu.jpg"></a>
-			<a class="options tower" href="#"><img class="icons" alt="bus" src="img/tower.jpg"></a>
+			<div class="choice"><a class="options canal" href="#"><img class="icons" alt="bus" src="img/canal.jpg"></a><p>CANAL CITY</p></div>
+			<div class="choice"><a class="options dazaifu" href="#"><img class="icons" alt="bus" src="img/dazaifu.jpg"></a><p>DAZAIFU</p></div>
+			<div class="choice"><a class="options tower" href="#"><img class="icons" alt="bus" src="img/tower.jpg"></a><p>FOKUOKA TOWER</p></div>
 		</div>
 	</div>
-	<div id="player-controls" class="ytp-controls">
+	<div id="player-controls" class="ytp-controls" style="display: none;">
 			
 			<ul class="list-item">
 				<li class="pause"><a class="opaque-button" href="#"><img alt="adventure" src="img/pause.png" style="background: white; border-radius: 100%;"></a></li>
 			</ul>
-		</div>
+	</div>
+	<div class="option_main" style="display: block;">
+		<a class="options starts" href="#"><img class="icons" alt="start" src="img/start-button.png" style="width: 12%;"></a>
+	</div>
   </body>
 </html>

@@ -19,7 +19,7 @@
 		width: '100%',
 		videoId: 'rQ85SalP5m4',
 		playerVars: { 'autoplay': 1, 
-		'controls': 0,
+		'controls': 1,
 		'showinfo': 0,
 		'loop':1,
 		'enablejsapi' : 1,
@@ -43,41 +43,69 @@
     	}
 	 });
 	
+	$('.starts').bind('click', function(){
+		clearInterval(startings);
+		player.seekTo(parseFloat(17));
+		player.playVideo();
+		$('.option_main').hide();
+		$('#player-controls').show();
+	});
 	$('.bus').bind('click', function(){
+		clearInterval(stop1);
 		player.seekTo(parseFloat(60));
 		player.playVideo();
 		$('.option1').hide();
 		$('#player-controls').show();
 	});
 	$('.taxi').bind('click', function(){
-		player.seekTo(parseFloat(120));
+		clearInterval(stop1);
+		player.seekTo(parseFloat(150));
 		player.playVideo();
 		$('.option1').hide();
 		$('#player-controls').show();
 	});
 	$('.train').bind('click', function(){
-		player.seekTo(parseFloat(180));
+		clearInterval(stop1);
+		player.seekTo(parseFloat(240));
 		player.playVideo();
 		$('.option1').hide();
 		$('#player-controls').show();
 	});
 	
 	$('.canal').bind('click', function(){
-		player.seekTo(parseFloat(860));
+		clearInterval(stop_bus);
+		clearInterval(stop_taxi);
+		clearInterval(stop_train);
+		clearInterval(option_bus);
+		clearInterval(option_taxi);
+		clearInterval(option_train);
+		player.seekTo(parseFloat(310));
 		player.playVideo();
-		$('.option1').hide();
+		$('.option2').hide();
 		$('#player-controls').show();
 	});
 	$('.dazaifu').bind('click', function(){
-		player.seekTo(parseFloat(1520));
+		clearInterval(stop_bus);
+		clearInterval(stop_taxi);
+		clearInterval(stop_train);
+		clearInterval(option_bus);
+		clearInterval(option_taxi);
+		clearInterval(option_train);
+		player.seekTo(parseFloat(380));
 		player.playVideo();
-		$('.option1').hide();
+		$('.option2').hide();
 		$('#player-controls').show();
 	});
 	$('.tower').bind('click', function(){
-		player.seekTo(parseFloat(2480));
+		clearInterval(stop_bus);
+		clearInterval(stop_taxi);
+		clearInterval(stop_train);
+		clearInterval(option_bus);
+		clearInterval(option_taxi);
+		clearInterval(option_train);
+		player.seekTo(parseFloat(450));
 		player.playVideo();
-		$('.option1').hide();
+		$('.option2').hide();
 		$('#player-controls').show();
 	});
   }
@@ -125,14 +153,20 @@
 	  if (time + .4 < stopPlayAt) {
 		rate = player.getPlaybackRate();
 		remainingTime = (stopPlayAt - time) / rate;
-		stopPlayTimer = setTimeout(stopVideo, remainingTime * 1500);
+		//stopPlayTimer = setTimeout(stopVideo, remainingTime * 1500);
 	  }
 	}
   }
   
+  var startings = setInterval(function(){
+	  if(player.getCurrentTime() >= 15){
+		  player.seekTo(parseFloat(0));
+		  player.playVideo();
+	  }
+  },100);
   
   var options_interval = setInterval(function(){
-	  if(player.getCurrentTime() >= 8){
+	  if(player.getCurrentTime() >= 25){
 		  $('.option1').css({opacity:0}).show().animate({opacity:1}, 5000);
 		  $('#player-controls').hide();
 		  clearInterval(options_interval);
@@ -142,48 +176,72 @@
 	  }*/
   },100);
   
-  var option_place1 = setInterval(function(){
-	  if(player.getCurrentTime() >= 75){
-		  $('.option2').css({opacity:0}).show().animate({opacity:1}, 5000);
-		  $('#player-controls').hide();
-		  clearInterval(option_place1);
+  var stop1= setInterval(function(){
+	  if(player.getCurrentTime() >= 40){
+		  stopVideo();
 	  }
   }, 100);
   
-  var stop1= setInterval(function(){
+  var option_bus = setInterval(function(){
 	  if(player.getCurrentTime() >= 85){
-		  stopVideo();
-	  }
-  }, 100);
-  
-  var option_place2 = setInterval(function(){
-	  if(player.getCurrentTime() >= 135){
 		  $('.option2').css({opacity:0}).show().animate({opacity:1}, 5000);
 		  $('#player-controls').hide();
-		  clearInterval(option_place1);
+		  clearInterval(option_bus);
 	  }
   }, 100);
   
-  var stop2= setInterval(function(){
-	  if(player.getCurrentTime() >= 145){
+  var stop_bus= setInterval(function(){
+	  if(player.getCurrentTime() >= 100){
 		  stopVideo();
 	  }
   }, 100);
   
-  var option_place3 = setInterval(function(){
-	  if(player.getCurrentTime() >= 195){
+  var option_taxi= setInterval(function(){
+	  if(player.getCurrentTime() >= 175){
 		  $('.option2').css({opacity:0}).show().animate({opacity:1}, 5000);
 		  $('#player-controls').hide();
-		  clearInterval(option_place1);
+		  clearInterval(option_taxi);
 	  }
   }, 100);
   
-  var stop1= setInterval(function(){
-	  if(player.getCurrentTime() >= 205){
+  var stop_taxi= setInterval(function(){
+	  if(player.getCurrentTime() >= 190){
 		  stopVideo();
 	  }
   }, 100);
   
+  var option_train= setInterval(function(){
+	  if(player.getCurrentTime() >= 265){
+		  $('.option2').css({opacity:0}).show().animate({opacity:1}, 5000);
+		  $('#player-controls').hide();
+		  clearInterval(option_train);
+	  }
+  }, 100);
+  
+  var stop_train = setInterval(function(){
+	  if(player.getCurrentTime() >= 280){
+		  stopVideo();
+	  }
+  }, 100);
+  
+  var stop_canal = setInterval(function(){
+	  if(player.getCurrentTime() >= 350){
+		  stopVideo();
+	  }
+  }, 100);
+  
+  var stop_dazaifu = setInterval(function(){
+	  if(player.getCurrentTime() >= 420){
+		  stopVideo();
+	  }
+  }, 100);
+  
+  var stop_tower= setInterval(function(){
+	  if(player.getCurrentTime() >= 490){
+		  stopVideo();
+	  }
+  }, 100);
+
   function options(){
 	  //alert('test');
   }
