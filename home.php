@@ -52,7 +52,7 @@ p{
 			<p class="header-description">We will take you to the place you've never been. </p>
 	</div>
 	<div  class="share-box">
-			<iframe src="//www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;layout=button_count" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
+			<iframe src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fjapan-adventure.trcorp.cho88.com%2Fhome.php&amp;layout=button_count&amp;appId=631559466911808" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowTransparency="true"></iframe>
 		</div>
 	<form id="location" action="process.php" method="post">
 		<div class="holder">
@@ -93,16 +93,33 @@ p{
 	</div>
 	<div class="option2">
 		<div class="opt-main2">
-			<div class="choice"><a class="options canal" href="#"><img class="icons" alt="bus" src="img/canal.jpg"></a><p>CANAL CITY</p></div>
-			<div class="choice"><a class="options dazaifu" href="#"><img class="icons" alt="bus" src="img/dazaifu.jpg"></a><p>DAZAIFU</p></div>
-			<div class="choice"><a class="options tower" href="#"><img class="icons" alt="bus" src="img/tower.jpg"></a><p>FOKUOKA TOWER</p></div>
+			<div class="choice">
+				<a class="options canal thumb-canals" href="#">CANAL <br/> CITY</a>
+			</div>
+			<div class="choice">
+				<a class="options dazaifu thumb-dazaifus" href="#">DAZAIFU</a>
+			</div>
+			<div class="choice">
+				<a class="options tower thumb-towers" href="#">FOKUOKA TOWER</a>
+			</div>
+		</div>
+		
+	</div>
+	<div class="thumbs">
+		<div class="thumb-canal">
+			<img class="icons" alt="canal" src="img/canal.jpg"/>
+		</div>
+		<div class="thumb-dazaifu">
+			<img class="icons" alt="bus" src="img/dazaifu.jpg"/>
+		</div>
+		<div class="thumb-tower">
+			<img class="icons" alt="bus" src="img/tower.jpg"/>
 		</div>
 	</div>
 	<div class="option_main" style="display: block;">
-				<a class="btn-opaque options starts " href="#"><!-- <img class="icons" alt="start" src="img/start-button.png"/> -->Click here to start</a>
+				<a class="btn-opaque options starts " href="#">Click here to start</a>
 	</div>
 	<div id="player-controls" class="ytp-controls" style="display: none;">
-			
 			<ul class="list-item">
 				<li class="pause"><a class="opaque-button" href="#"><img alt="adventure" src="img/pause.png" style="background: white; border-radius: 100%;"></a></li>
 			</ul>

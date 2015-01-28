@@ -108,7 +108,17 @@
 		$('.option2').hide();
 		$('#player-controls').show();
 	});
-  }
+	
+	$('.thumb-canals').mouseenter(function(){
+		  $('.thumb-canal').css({opacity:0}).animate({opacity:0.8});
+	  });
+	  
+	  $('.thumb-canals').mouseleave(function(){
+		  $('.thumb-canal').css({opacity:0.8}).animate({opacity:0});
+	  });
+  };
+ 
+  
   
   
   
