@@ -124,3 +124,37 @@ input{
 #player {
 	width: 100%!important;
 }
+.btn-opaque {
+	background-color: #fff;
+	color: #030303;
+	border: none;
+	font-weight: bold;
+	padding: 1em 3em;
+	opacity: .7;
+}
+
+.btn-opaque:hover{
+	opacity: 1;
+	color: #515151;
+}
+.btn-bus {
+	background: url(../img/bus_48x48_white.png) no-repeat;
+	background-position: 1.5em .8em;
+	color: #fff!important;
+	font-size: 35px;
+	border: 1.5px solid #fff !important;
+}
+.btn-taxi {
+	background: url(../img/taxi_48x48_white.png) no-repeat left;
+	background-position: 1.5em .8em;
+	color: #fff!important;
+	font-size: 35px;
+	border: 1.5px solid #fff !important;
+}
+.btn-train {
+	background: url(../img/train_48x48_white.png) no-repeat left;
+	background-position: 1.5em .8em;
+	color: #fff!important;
+	font-size: 35px;
+	border: 1.5px solid #fff !important;
+}

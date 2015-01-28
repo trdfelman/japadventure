@@ -86,9 +86,9 @@ p{
 	
 	<div class="option1">
 		<div class="opt-main">
-			<div class="choice"><a class="options bus" href="#"><img class="icons" alt="bus" src="img/bus.png"></a><p>BUS</p></div>
-			<div class="choice"><a class="options taxi" href="#"><img class="icons" alt="bus" src="img/taxi.png"></a><p>TAXI</p></div>
-			<div class="choice"><a class="options train" href="#"><img class="icons" alt="bus" src="img/train.png"></a><p>TRAIN</p></div>
+			<div class="choice"><a class="btn-opaque options bus btn-bus" href="#">BUS</a></div>
+			<div class="choice"><a class="btn-opaque options taxi btn-taxi" href="#">TAXI</a></div>
+			<div class="choice"><a class="btn-opaque options train btn-train" href="#">TRAIN</a></div>
 		</div>
 	</div>
 	<div class="option2">
@@ -99,7 +99,7 @@ p{
 		</div>
 	</div>
 	<div class="option_main" style="display: block;">
-				<a class="options starts" href="#"><img class="icons" alt="start" src="img/start-button.png"/></a>
+				<a class="btn-opaque options starts " href="#"><!-- <img class="icons" alt="start" src="img/start-button.png"/> -->Click here to start</a>
 	</div>
 	<div id="player-controls" class="ytp-controls" style="display: none;">
 			
