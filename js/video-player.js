@@ -127,70 +127,82 @@ stopPlayTimer;   // Reference to settimeout call
 		  }, 100);
 		  
 		  $('.starts').bind('click', function(){
-				clearInterval(startings);
-				player.seekTo(parseFloat(17));
-				player.playVideo();
-				$('.option_main').hide();
-				$('#player-controls').show();
-			});
-			$('.bus').bind('click', function(){
-				clearInterval(stop1);
-				player.seekTo(parseFloat(60));
-				player.playVideo();
-				$('.option1').hide();
-				$('#player-controls').show();
-			});
-			$('.taxi').bind('click', function(){
-				clearInterval(stop1);
-				player.seekTo(parseFloat(150));
-				player.playVideo();
-				$('.option1').hide();
-				$('#player-controls').show();
-			});
-			$('.train').bind('click', function(){
-				clearInterval(stop1);
-				player.seekTo(parseFloat(240));
-				player.playVideo();
-				$('.option1').hide();
-				$('#player-controls').show();
-			});
-			
-			$('.canal').bind('click', function(){
-				clearInterval(stop_bus);
-				clearInterval(stop_taxi);
-				clearInterval(stop_train);
-				clearInterval(option_bus);
-				clearInterval(option_taxi);
-				clearInterval(option_train);
-				player.seekTo(parseFloat(310));
-				player.playVideo();
-				$('.option2').hide();
-				$('#player-controls').show();
-			});
-			$('.dazaifu').bind('click', function(){
-				clearInterval(stop_bus);
-				clearInterval(stop_taxi);
-				clearInterval(stop_train);
-				clearInterval(option_bus);
-				clearInterval(option_taxi);
-				clearInterval(option_train);
-				player.seekTo(parseFloat(380));
-				player.playVideo();
-				$('.option2').hide();
-				$('#player-controls').show();
-			});
-			$('.tower').bind('click', function(){
-				clearInterval(stop_bus);
-				clearInterval(stop_taxi);
-				clearInterval(stop_train);
-				clearInterval(option_bus);
-				clearInterval(option_taxi);
-				clearInterval(option_train);
-				player.seekTo(parseFloat(450));
-				player.playVideo();
-				$('.option2').hide();
-				$('#player-controls').show();
-			});
+			  clearInterval(startings);
+			  player.seekTo(parseFloat(17));
+			  player.playVideo();
+			  $('.option_main').hide();
+			  $('#player-controls').show();
+			 });
+			 $('.bus').bind('click', function(){
+			  clearInterval(stop1);
+			  clearInterval(stop_taxi);
+			  clearInterval(stop_train);
+			  player.seekTo(parseFloat(60));
+			  player.playVideo();
+			  $('.option1').hide();
+			  $('#player-controls').show();
+			 });
+			 $('.taxi').bind('click', function(){
+			  clearInterval(stop1);
+			  clearInterval(stop_bus);
+			  clearInterval(stop_train);
+			  player.seekTo(parseFloat(150));
+			  player.playVideo();
+			  $('.option1').hide();
+			  $('#player-controls').show();
+			 });
+			 $('.train').bind('click', function(){
+			  clearInterval(stop1);
+			  clearInterval(stop_bus);
+			  clearInterval(stop_taxi);
+			  player.seekTo(parseFloat(240));
+			  player.playVideo();
+			  $('.option1').hide();
+			  $('#player-controls').show();
+			 });
+			 
+			 $('.canal').bind('click', function(){
+			  clearInterval(stop_bus);
+			  clearInterval(stop_taxi);
+			  clearInterval(stop_train);
+			  clearInterval(option_bus);
+			  clearInterval(option_taxi);
+			  clearInterval(option_train);
+			  clearInterval(stop_dazaifu);
+			  clearInterval(stop_tower);
+			  player.seekTo(parseFloat(310));
+			  player.playVideo();
+			  $('.option2').hide();
+			  $('#player-controls').show();
+			 });
+			 $('.dazaifu').bind('click', function(){
+			  clearInterval(stop_bus);
+			  clearInterval(stop_taxi);
+			  clearInterval(stop_train);
+			  clearInterval(option_bus);
+			  clearInterval(option_taxi);
+			  clearInterval(option_train);
+			  clearInterval(stop_canal);
+			  clearInterval(stop_tower);
+			  player.seekTo(parseFloat(380));
+			  player.playVideo();
+			  $('.option2').hide();
+			  $('#player-controls').show();
+			 });
+			 $('.tower').bind('click', function(){
+			  clearInterval(stop_bus);
+			  clearInterval(stop_taxi);
+			  clearInterval(stop_train);
+			  clearInterval(option_bus);
+			  clearInterval(option_taxi);
+			  clearInterval(option_train);
+			  clearInterval(stop_canal);
+			  clearInterval(stop_dazaifu);
+			  player.seekTo(parseFloat(450));
+			  player.playVideo();
+			  $('.option2').hide();
+			  $('#player-controls').show();
+			 });
 			
 			$('.thumb-canals').mouseenter(function(){
 				  $('.thumb-canal').css({opacity:0}).animate({opacity:0.8});
