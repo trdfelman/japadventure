@@ -94,13 +94,13 @@ p{
 	<div class="option2">
 		<div class="opt-main2">
 			<div class="choice">
-				<a class="options canal thumb-canals" href="#">CANAL <br/> CITY</a>
+				<a class="options canal thumb-canals" href="#">CANAL&nbsp;CITY</a>
 			</div>
 			<div class="choice">
 				<a class="options dazaifu thumb-dazaifus" href="#">DAZAIFU</a>
 			</div>
 			<div class="choice">
-				<a class="options tower thumb-towers" href="#">FOKUOKA TOWER</a>
+				<a class="options tower thumb-towers" href="#">FOKUOKA&nbsp;TOWER</a>
 			</div>
 		</div>
 		

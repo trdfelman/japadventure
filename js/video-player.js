@@ -111,11 +111,22 @@
 	
 	$('.thumb-canals').mouseenter(function(){
 		  $('.thumb-canal').css({opacity:0}).animate({opacity:0.8});
-	  });
-	  
-	  $('.thumb-canals').mouseleave(function(){
+	});
+	$('.thumb-canals').mouseleave(function(){
 		  $('.thumb-canal').css({opacity:0.8}).animate({opacity:0});
-	  });
+	});
+	$('.thumb-dazaifus').mouseenter(function(){
+		  $('.thumb-dazaifu').css({opacity:0}).animate({opacity:0.8});
+	});
+	$('.thumb-dazaifus').mouseleave(function(){
+		  $('.thumb-dazaifu').css({opacity:0.8}).animate({opacity:0});
+	});
+	$('.thumb-towers').mouseenter(function(){
+		  $('.thumb-tower').css({opacity:0}).animate({opacity:0.8});
+	});
+	$('.thumb-towers').mouseleave(function(){
+		  $('.thumb-tower').css({opacity:0.8}).animate({opacity:0});
+	});
   };
  
   
