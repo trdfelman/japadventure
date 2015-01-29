@@ -192,19 +192,19 @@ input{
 }
 .thumb-canals {
 	background: url(../img/canal_48x48_white.png) no-repeat;
-	background-position: .6em .2em;
+	background-position: 2em .2em;
 	color: #fff!important;
 	font-size: 20px;
 	border: 1.5px solid #fff !important;
-	padding: 1em 1em 1em 3em;
+	padding: 1em 2.5em 1em 4.5em;
 }
 .thumb-dazaifus {
 	background: url(../img/shrine_48x48_white.png) no-repeat;
-	background-position: .6em .2em;
+	background-position: 2.6em .2em;
 	color: #fff!important;
 	font-size: 20px;
 	border: 1.5px solid #fff !important;
-	padding: 1em 1em 1em 3em;
+	padding: 1em 3.5em 1em 5em;
 }
 .thumb-towers {
 	background: url(../img/tower_48x48_white.png) no-repeat;
